@@ -1,0 +1,23 @@
+from sys import argv
+import pandas as pd
+import numpy as np
+#unit price analysis
+#paying over or under market value for a product
+#Adjust for seasonality - summer lower, winter higher
+#Adjust for currency strength:
+#    primarily in raw goods
+#    Todo: look into other goods that are strongly effected by currency strength
+#    Account for time-biased goods, IE inflation, advances in technology, trends
+#
+def unit_price(price,ref_prices,severity):
+    ref_arr = np.array(ref_prices)
+    if price < ref_arr.mean - ref_arr.std*severity or price > ref_arr.mean + ref_arry.std*severity:
+        
+
+
+def main():
+    apply_rules()
+
+if __name__ == '__main__':
+    df = pd.DataFrame.from_csv(argv[1])
+    main(df)
